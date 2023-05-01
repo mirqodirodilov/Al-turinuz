@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+
+  <section class="container-fluid pt-5 bg mt-5">
+      <div class="containe text-center mt-5">
+        <div class="row pt-md-5 pt-lg-0 pb-5">
+            <div class="col-12">
+                <h1 class="text-white fw-bolder sizePeronalH">Cобытия</h1>
+            </div>
+        </div>
+
+      </div>
+    </section> 
+
+    <section class="container-fluid py-3">
+        <div class="container p-0 p-md-5">
+          <div class="row">
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb bg-transparent">
+                <li class="breadcrumb-item"><a href="index.html" class="text-dark"><i class="fas fa-home"></i> Главная</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Cобытия</li>
+              </ol>
+            </nav>
+          </div>
+            <div class="row">                 
+                 <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 p-2">
+                    <div class="card border-0 p-3 d-inline-block ">
+                    <h5 class="fw-bold pb-0">{{events_detail.title}}</h5>
+                    <div class="fw-normal ps-3 pt-0 pb-3 small">
+                        <span><i class="fa fa-calendar text-secondary"></i> {{events_detail.date}} </span>
+                        <span class="px-2"><i class="fa fa-user text-secondary"></i> {{events_detail.user_name}} </span>
+                    </div>
+                        <img src="img/bg/back (5).jpg" width="100%" alt="">
+                        <h6 class="px-md-3 py-2 py-lg-5 fw-normal" style="text-align: justify;">
+                            {{events_detail.description}}
+                             </h6>   
+  
+                    </div>
+                </div> 
+            </div>
+
+
+        </div>
+    </section>
+
+{% endblock content %}

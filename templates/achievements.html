@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+  <section class="container-fluid bg mt-5" style="height: 20vh; padding-top: 100px;">
+      <div class="containe text-center">
+        <div class="row pb-5">
+            <div class="col-12">
+                <h1 class="text-white fw-bolder sizePeronalH">Достижения</h1>
+            </div>
+        </div>
+
+      </div>
+    </section> 
+
+
+
+    <section class="container-fluid py-3">
+        <div class="container">
+          <div class="row">
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb bg-transparent">
+                <li class="breadcrumb-item"><a href="index.html" class="text-dark"><i class="fas fa-home"></i> Главная</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Достижения</li>
+              </ol>
+            </nav>
+          </div>
+            <div class="row">
+                {% for i in aciv %}
+                <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 p-3">
+                    <div class="card p-3">
+                        <a href="#img12" aria-label="Click to enlarge image"><img src="{{i.image.url}}" alt="yummy dessert" width="100%" height="330"></a>
+                        <h5 class="py-3 fw-bold">{{i.name}}</h5>
+                        <h6><i class="fa fa-trophy mx-1"></i>{{i.achivment}}</h6>
+                    </div>
+                </div>  
+                {% endfor %}                       
+            </div>
+        </div>
+    </section>
+
+    
+{% endblock content %}

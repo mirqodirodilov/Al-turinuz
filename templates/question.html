@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+
+  <section class="container-fluid pt-5 bg mt-5">
+      <div class="containe text-center mt-5">
+        <div class="row pt-md-5 pt-lg-0 pb-5">
+            <div class="col-12">
+                <h1 class="text-white fw-bolder sizePeronalH">Задания</h1>
+            </div>
+        </div>
+
+      </div>
+    </section> 
+
+    
+<section class="container-fluid py-5">
+  <div class="container">
+           <!-- Matematika -->
+           <div class="row">
+            {% for i in ques %}
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 pt-5">
+              <h5><i class="fa fa-home-alt"></i> {{i.fanlar_nomi}}</h5>
+            </div>
+            {% for j in i.question.all %}
+            <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 p-3">
+              
+              <div class="card shadow-lg p-3 border-0 rounded">
+
+                <a href="assets/question/1/1adabiyot-uzpdf.pdf" class="text-start h5 text-dark ps-3 fw-bold">{{j.title}}</a>
+              <div class="d-inline">
+                    <small><i class="fa fa-calendar text-secondary"></i> {{j.created_at}} </small>
+                    <small class="px-2"><i class="fa fa-user text-secondary"></i> {{j.author}} </small>
+                  </div>
+                  <div class="text-right pt-3"><a href="{{j.files.url}}" class="btn btn-sm btn-success py-1"><i class="fa fa-download"></i> Yuklab olish</a></div>
+              </div>
+             
+              </div>
+ {% endfor %}
+ 
+  {% endfor %}
+          </div>
+
+      </div>
+      </div>
+    </section>
+
+
+           
+
+
+{% endblock content %}

@@ -1,0 +1,167 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="ru">
+
+  <head>
+    <meta charset="utf-8">
+    <title>Академический лицей Турин</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="shortcut icon" href="img/favicon.png" type="image/png">
+
+
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="fontawesomePremium/css/all.css">
+    <link rel="stylesheet" href="css/slick.css">
+  
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+      <link rel="stylesheet" type="text/css" href="css/animate.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <style>
+    
+      table {
+        border: 1px solid rgb(255, 255, 255);
+        border-collapse: collapse;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        table-layout: fixed;
+        }
+        
+        table caption {
+        font-size: 1.5em;
+        margin: .5em 0 .75em;
+        }
+        
+        table tr {
+        border: 1px solid #ddd;
+        padding: .35em;
+        }
+        
+        table th,
+        table td {
+        padding: .625em;
+        text-align: center;
+        border: 1px solid #ddd;
+        }
+        
+        
+        @media screen and (max-width: 576px) {
+        table {
+          border: 0;
+        }
+        
+        table caption {
+          font-size: 1.3em;
+        }
+        
+        table thead {
+          border: none;
+          clip: rect(0 0 0 0);
+          height: 1px;
+          margin: -1px;
+          overflow: hidden;
+          padding: 0;
+          position: absolute;
+          width: 1px;
+        }
+        
+        table tr {
+          border-bottom: 3px solid #ddd;
+          display: block;
+          margin-bottom: .625em;
+        }
+        
+        table td {
+          border-bottom: 1px solid #ddd;
+          display: block;
+          font-size: 12px;
+          text-align: right;
+        }
+        
+        table td::before {
+          content: attr(data-label);
+          float: left;
+          font-size: 14px;
+        }
+        
+        table td:last-child {
+          border-bottom: 0;
+        }
+        }
+      
+
+      
+        </style>
+  </head>
+
+
+  
+  <section class="container-fluid pt-5 bg mt-5">
+      <div class="container-fluid p-0 text-center">
+        <div class="row pt-5 pb-5">
+            <div class="col-12">
+                <h1 class="text-white fw-bolder sizePeronalH1">To'garaklar</h1>
+            </div>
+        </div>
+
+      </div>
+    </section> 
+    
+
+      
+<section class="container-fluid py-5">
+  <div class="container">
+    <div class="row">
+        {% for i in mugu %}
+      <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+        <h5 class="font-weight-bold pl-3"><i class="fa fa-home"></i> {{i.fanlar_nomi}}</h5>
+        <table class="p-3">
+          
+          <thead>
+            <tr>
+              <th scope="col">№</th>
+              <th scope="col">O'qituvchining ismi, sharifi</th>
+              <th scope="col">To'garak o'tkaziladigan vaqti</th>
+              <th scope="col">To'garak o'tkaziladigan xona</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for j in i.togaraklar.all %}
+            <tr>
+              <td scope="row" data-label="№">{{j.id_raqami}}</td>
+              <td data-label="O'qituvchining ismi, sharifi">{{j.ustoz_f_i_sh}}</td>
+              <td data-label="To'garak o'tkaziladigan vaqti">{{j.togarak_vaqtlari}}</td>
+              <td data-label="To'garak o'tkaziladigan xona">{{j.togarak_xonasi}}</td>
+            </tr>
+          {% endfor %}
+                </tbody>
+                
+              </table>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+
+
+
+ 
+    
+      
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="bootstrap/js/bootstrap.js"></script>
+    <script type="text/javascript" src="bootstrap/js/bootstrap.bundle.js"></script>
+    <script type="text/javascript" src="fontawesomePremium/js/all.js"></script>
+    
+    <script type="text/javascript" src="js/fontaweasome.js"></script>
+    <script src="js/jquery.ripples.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+    
+    
+    </body>
+    </html>
+{% endblock content%}

@@ -1,0 +1,222 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+  <style>
+
+
+    
+table {
+	border: 1px solid rgb(255, 255, 255);
+	border-collapse: collapse;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	table-layout: fixed;
+  }
+  
+  table caption {
+	font-size: 1.5em;
+	margin: .5em 0 .75em;
+  }
+  
+  table tr {
+	border: 1px solid #ddd;
+	padding: .35em;
+  }
+  
+  table th,
+  table td {
+	padding: .625em;
+	text-align: center;
+	border: 1px solid #ddd;
+  }
+  
+  
+  @media screen and (max-width: 576px) {
+	table {
+	  border: 0;
+	}
+  
+	table caption {
+	  font-size: 1.3em;
+	}
+	
+	table thead {
+	  border: none;
+	  clip: rect(0 0 0 0);
+	  height: 1px;
+	  margin: -1px;
+	  overflow: hidden;
+	  padding: 0;
+	  position: absolute;
+	  width: 1px;
+	}
+	
+	table tr {
+	  border-bottom: 3px solid #ddd;
+	  display: block;
+	  margin-bottom: .625em;
+	}
+	
+	table td {
+	  border-bottom: 1px solid #ddd;
+	  display: block;
+	  font-size: 12px;
+	  text-align: right;
+	}
+	
+	table td::before {
+	  content: attr(data-label);
+	  float: left;
+	  font-size: 14px;
+	}
+	
+	table td:last-child {
+	  border-bottom: 0;
+	}
+  }
+  
+
+
+  </style>
+</head>
+
+<body>
+  
+
+
+
+   <section class="container-fluid pt-5 mt-5 bg">
+      <div class="containe text-center mt-5">
+        <div class="row pt-md-5 pt-lg-0 pb-md-5 pb-lg-3 pb-3">
+            <div class="col-12">
+                <h1 class="text-white fw-bolder">Oraliq nazorati natijalari</h1>
+            </div>
+        </div>
+
+      </div>
+    </section>  
+
+    <section class="container-fluid py-3">
+        <div class="container" style="min-height: 60vh;">
+          <div class="row">
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb bg-transparent">
+                <li class="breadcrumb-item text-dark"><a href="index.html" class="text-dark"><i class="fas fa-home"></i> Asosiy</a></li>
+                <li class="breadcrumb-item text-dark active" aria-current="page">Oraliq nazorati natijalari</li>
+              </ol>
+            </nav>
+          </div>
+         <div class="row text-center py-3">
+          <div class="col-12"><h5 class="fw-bold">Akademik litseyda o'tkazilgan Oraliq nazorati natijalari</h5></div>
+         </div>
+          <div class="row shadow-lg pt-3 pb-2 mt-3">
+            {% for i in resultss %}
+            <div class="col-md-12 col-sm-12 col-md-9 col-lg-9 col-xl-9 ps-5 text-center text-md-left"><h5 class="pl-4">{{i.title}}</h5></div>
+            <div class="col-md-12 col-sm-12 col-md-3 col-lg-3 col-xl-3 border-start text-center"><a href="{{i.upload.url}}" class="text-primary h5">Natijalarni ko'rish <i class="fa fa-eye"></i></a></div>
+            {% endfor %}
+          </div>
+
+
+          <div class="row p-5 overflow-hidden">
+               <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 text-center">
+              <div id="piechart"></div>
+            </div>
+               <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 text-center">
+              <div id="piechart2"></div>
+            </div>
+               <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 text-center">
+              <div id="piechart3"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+
+      
+
+
+    
+      
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="bootstrap/js/bootstrap.js"></script>
+    <script type="text/javascript" src="bootstrap/js/bootstrap.bundle.js"></script>
+    <script type="text/javascript" src="fontawesomePremium/js/all.js"></script>
+    
+    <script type="text/javascript" src="js/fontaweasome.js"></script>
+    <script src="js/jquery.ripples.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+  <script type="text/javascript">
+    // Load google charts
+    google.charts.load('current', {'packages':['corechart']});
+    google.charts.setOnLoadCallback(drawChart);
+    
+    // Draw the chart and set the chart values
+    function drawChart() {
+      var data = google.visualization.arrayToDataTable([
+      ['Task', 'Hours per Day'],
+      ['Ijobiy', 827],
+      ['Salbiy', 259],
+    ]);
+    
+      // Optional; add a title and set the width and height of the chart
+      var options = {'title':'Imtihon topshirganlardan', 'width': 350, 'height':400};
+    
+      // Display the chart inside the <div> element with id="piechart"
+      var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+      chart.draw(data, options);
+    }
+
+
+    google.charts.setOnLoadCallback(drawChart2);
+    
+    // Draw the chart and set the chart values
+    function drawChart2() {
+      var data = google.visualization.arrayToDataTable([
+      ['Task', "Yo'nalishlar bo'yicha "],
+      ['Aniq fanlar (Texnika)', 827],
+      ['Aniq fanlar (Iqtisod)', 259],
+      ['Xorijiy filologiya (Ingliz tili)', 259],
+    ]);
+    
+      // Optional; add a title and set the width and height of the chart
+      var options = {'title':"Yo'nalishlar bo'yicha ijobiy natijaga erishganlar", 'width':350, 'height':400};
+    
+      // Display the chart inside the <div> element with id="piechart"
+      var chart = new google.visualization.PieChart(document.getElementById('piechart2'));
+      chart.draw(data, options);
+    }
+
+
+    google.charts.setOnLoadCallback(drawChart3);
+    
+    // Draw the chart and set the chart values
+    function drawChart3() {
+      var data = google.visualization.arrayToDataTable([
+      ['Task', "Yillar bo'yicha "],
+      ['2015', 827],
+      ['2016', 259],
+      ['2017', 259],
+      ['2018', 259],
+      ['2019', 547],
+      ['2020', 465],
+      ['2021', 959],
+      ['2022', 2000],
+    ]);
+    
+      // Optional; add a title and set the width and height of the chart
+      var options = {'title':"Yillar bo'yicha ijobiy natijaga erishganlar", 'width':350, 'height':400};
+    
+      // Display the chart inside the <div> element with id="piechart"
+      var chart = new google.visualization.PieChart(document.getElementById('piechart3'));
+      chart.draw(data, options);
+    }
+
+
+
+    </script>
+
+</body>
+</html>
+{% endblock content %}

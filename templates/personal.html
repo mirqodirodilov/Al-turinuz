@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+  <section class="container-fluid pt-5 mt-5 bg">
+      <div class="containe text-center mt-5">
+        <div class="row pt-md-5 pt-lg-0 pb-5">
+            <div class="col-12">
+                <h1 class="text-white fw-bolder sizePeronalH">Руководство</h1>
+            </div>
+        </div>
+
+      </div>
+    </section> 
+
+    <section class="container-fluid py-3">
+        <div class="container">
+          <div class="row">
+            <nav aria-label="breadcrumb" id="directorSection">
+              <ol class="breadcrumb bg-transparent">
+                <li class="breadcrumb-item"><a href="index.html" class="text-dark"><i class="fas fa-home"></i> Главная</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Руководство</li>
+              </ol>
+            </nav>
+          </div>
+
+            <div class="row">
+                {% for i in person %}
+                <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3 p-2 ps-md-1 p-md-2 p-lg-3">
+                    <div class="shadow-lg p-3">
+                        <img src="{{i.image.url}}" height="300" width="100%" alt="">
+                        <h6 class="fw-bold mt-3">{{i.lavozm}}</h6>
+                        <h6>{{i.name}}</h6>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+
+
+
+           <div class="row">
+            <div class="col-12">              
+              <nav aria-label="breadcrumb" class="pt-5" id="teacherSection">
+              <ol class="breadcrumb bg-transparent">
+                <li class="breadcrumb-item"><a href="index.html" class="text-dark"><i class="fas fa-home"></i> Главная</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Руководители кафедра</li>
+              </ol>
+            </nav>
+          </div>
+{% for i in teacer %}
+                <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3 p-2 ps-md-1 p-md-2 p-lg-3">
+                    
+                    <div class="card p-3">
+                        <img src="{{i.image.url}}" width="100%" height="300" alt="">
+                        <h5 class="fw-bold mt-3">{{i.lavozm}}</h5>
+                        <h6>{{i.name}}</h6>
+                    </div>
+                    
+                </div>
+{% endfor %}
+            </div>
+        </div>
+    </section>
+
+{% endblock content %}

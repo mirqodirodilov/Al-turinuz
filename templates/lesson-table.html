@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+  <section class="container-fluid pt-5 bg mt-5">
+      <div class="containe text-center mt-5">
+        <div class="row pt-md-5 pt-lg-0 pb-5">
+            <div class="col-12">
+                <h1 class="text-white fw-bolder sizePeronalH">Расписание занятий</h1>
+            </div>
+        </div>
+
+      </div>
+    </section> 
+
+    <section class="container-fluid pt-3 pb-5">
+        <div class="container">
+          <div class="row">
+            <nav aria-label="breadcrumb" id="directorSection">
+              <ol class="breadcrumb bg-transparent">
+                <li class="breadcrumb-item"><a href="{% url 'index' %}" class="text-dark"><i class="fas fa-home"></i> Главная</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Расписание занятий</li>
+              </ol>
+            </nav>
+
+          </div>
+            <div class="row">
+                {% for i in lessons %}
+                <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-2 p-2">
+                     <a href="{% url 'lesson-table-detail' i.pk %}" class="btn py-3 w-100 text-decoration-none text-white" style="background-color: #3b5998;">
+                      <img src="">
+                        <h1>{{i.group}}-{{i.year}}</h1>
+                    </a>
+                </div>
+
+                {% endfor %}
+            </div>
+
+
+
+            </div>
+        </div>
+    </section>
+
+ {% endblock content %}

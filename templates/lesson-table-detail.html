@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+
+<section class="container-fluid pt-5 bg mt-5">
+  <div class="containe text-center mt-5">
+    <div class="row pt-md-5 pt-lg-0 pb-5">
+        <div class="col-12">
+            <h1 class="text-white fw-bolder sizePeronalH">Объявления</h1>
+        </div>
+    </div>
+
+  </div>
+</section> 
+
+<section class="container-fluid py-3">
+    <div class="container">
+      <div class="row">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb bg-transparent">
+            <li class="breadcrumb-item"><a href="index.html" class="text-dark"><i class="fas fa-home"></i> Главная</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Расписание занятий</li> /
+            <li>{{object.group}}-{{object.year}}</li>
+          </ol>
+        </nav>
+      </div>
+    
+      <div class="row">
+                 <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-12 p-2">
+                    <div class="card p-3 d-inline-block ">
+
+                    <h5 class="px-3 py-3 fw-normal textJustify">
+              
+                        
+                        <img src="{{object.image.url}}" width="100%" class="py-3" alt="">
+
+                      
+                             </h5>   
+                    </div>
+                </div> 
+            </div>
+
+
+        </div>
+    </section>
+
+
+
+{% endblock content %}

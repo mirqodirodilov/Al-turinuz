@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+	<head>
+		<meta charset="utf-8">
+		<title>Академический лицей Турин</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		<link rel="shortcut icon" href="img/favicon.png" type="image/png">
+
+
+		<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" href="fontawesomePremium/css/all.css">
+		<link rel="stylesheet" href="css/slick.css">
+	
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+	  	<link rel="stylesheet" type="text/css" href="css/animate.css">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+
+  <style>
+    
+table {
+	border: 1px solid rgb(255, 255, 255);
+	border-collapse: collapse;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	table-layout: fixed;
+  }
+  
+  table caption {
+	font-size: 1.5em;
+	margin: .5em 0 .75em;
+  }
+  
+  table tr {
+	border: 1px solid #ddd;
+	padding: .35em;
+  }
+  
+  table th,
+  table td {
+	padding: .625em;
+	text-align: center;
+	border: 1px solid #ddd;
+  }
+  
+  
+  @media screen and (max-width: 576px) {
+	table {
+	  border: 0;
+	}
+  
+	table caption {
+	  font-size: 1.3em;
+	}
+	
+	table thead {
+	  border: none;
+	  clip: rect(0 0 0 0);
+	  height: 1px;
+	  margin: -1px;
+	  overflow: hidden;
+	  padding: 0;
+	  position: absolute;
+	  width: 1px;
+	}
+	
+	table tr {
+	  border-bottom: 3px solid #ddd;
+	  display: block;
+	  margin-bottom: .625em;
+	}
+	
+	table td {
+	  border-bottom: 1px solid #ddd;
+	  display: block;
+	  font-size: 12px;
+	  text-align: right;
+	}
+	
+	table td::before {
+	  content: attr(data-label);
+	  float: left;
+	  font-size: 14px;
+	}
+	
+	table td:last-child {
+	  border-bottom: 0;
+	}
+  }
+  
+
+  
+
+  h1, h2, h3, h4, h5, h6 {
+    color: #ffffff;
+}
+a, a:hover, a:focus, a:active {
+    text-decoration: none;
+    outline: none;
+}
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+div#slider-home .carousel-item::before {
+    background: #0000005c;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+#slider-home h3 {
+    text-transform: capitalize;
+    font-size: 50px;
+}
+
+#slider-home p {
+    font-size: 23px;
+}
+
+#slider-home .btn {
+    background: #f82249;
+    color: #fff;
+    padding: 12px 30px !important;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+#slider-home .btn:hover{    
+    background: #ffffff;
+    color: #f82249;
+}
+
+  </style>
+</head>
+
+<body>
+  
+<header id="site-header" class="header">
+  <div class="container">
+      <nav>
+          <div class="logo" tabindex="1"><a href="index.html" class="text-decoration-none"><img src="img/logo-white.png" width="230" alt=""></a></div>
+          <div class="nav-wrap">
+              <div class="nav-button">
+                  <a id="nav-toggle" href="#!" class="">
+                      <span class="before"></span>
+                  </a>
+              </div>
+              <ul class="top_nav">
+      <li>
+                      <a href="https://www.awwwards.com/">О лицее</a>
+                      <ul class="sub-nav">
+          <li><a href="about.html">О нас</a></li>
+          <li><a href="personal.html">Руководство</a></li>
+          <li><a href="personal.html#teacherSection">Педагогический состав</a></li>
+          <li><a href="achievements.html">Достижения</a></li>
+          <li><a href="gallery.html">Фотогалерея</a></li>
+          <li><a href="reception.html">Прием-2023</a></li>
+                      </ul>
+                  </li>
+                  <li>
+                      <a href="https://www.awwwards.com/">Новости</a>
+                      <ul class="sub-nav">
+          <li><a href="events.html">Cобытия</a></li>
+          <li><a href="news.html">Объявления</a></li>
+                      </ul>
+                  </li>
+                  <li>
+                      <a href="https://www.awwwards.com/">Процессы урока</a>
+                      <ul class="sub-nav">
+          <li><a href="lesson-table.html">Dars jadvali</a></li>
+          <li><a href="mugs.html">To'garaklar</a></li>
+          <li><a href="question.html">Topshiriqlar</a></li>
+          <li><a href="results-reception.html">Qabul natijalari</a></li>
+          <li><a href="results.html">Oraliq natijalari</a></li>
+                      </ul>
+                  </li>
+      <li><a href="contact.html">Контакт</a></li>
+      <li class="phone"><a class="getstarted px-3 pt-2 pb-2" href="https://t.me/+998712462331">+998 (71) 246-23-31</a></li>
+
+              </ul>
+          </div>
+      </nav>
+  </div>
+</header>
+
+
+   <section class="container-fluid" id="personal-page">
+      <div class="container-fluid p-0 text-center">
+        <div class="row pb-5">
+            <div class="col-12">
+                <h1 class="text-white fw-bolder sizePeronalH">To'garaklar</h1>
+            </div>
+        </div>
+
+      </div>
+    </section>  
+      
+          
+
+    <section id="faq" class="faq section-bg">
+        <div class="container" data-aos="fade-up">
+          <div class="faq-list">
+            <ul>
+              <li data-aos="fade-up" data-aos-delay="100">
+                <i class="fa fa-home-alt icon-help me-5"></i> <a data-bs-toggle="collapse" class="collapse ms-2 mt-1" data-bs-target="#faq-list-1"> Математика<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                <div id="faq-list-1" class="collapse show pt-3" data-bs-parent=".faq-list">
+                 
+                  <table class="p-5">
+                    <thead>
+                      <tr>
+                        <th scope="col">№</th>
+                        <th scope="col">O'qituvchining ismi, sharifi</th>
+                        <th scope="col">To'garak o'tkaziladigan vaqti</th>
+                        <th scope="col">To'garak o'tkaziladigan xona</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td scope="row" data-label="№">1</td>
+                        <td data-label="O'qituvchining ismi, sharifi">Nurkaev Shuxrat J</td>
+                        <td data-label="To'garak o'tkaziladigan vaqti">Chorshanba 13.20-14.20</td>
+                        <td data-label="To'garak o'tkaziladigan xona">311-xona</td>
+                      </tr>
+                      <tr>
+                        <td scope="row" data-label="№">2</td>
+                        <td data-label="O'qituvchining ismi, sharifi">Арман Галина Э.</td>
+                        <td data-label="To'garak o'tkaziladigan vaqti">Dushanba 13:20-14:20</td>
+                        <td data-label="To'garak o'tkaziladigan xona">206-xona</td>
+                      </tr>
+                      <tr>
+                        <td scope="row" data-label="№">3</td>
+                        <td data-label="O'qituvchining ismi, sharifi">Хабибулина Munira М.</td>
+                        <td data-label="To'garak o'tkaziladigan vaqti">Payshanba 13.20-14.20</td>
+                        <td data-label="To'garak o'tkaziladigan xona">201-xona</td>
+                      </tr>
+                      <tr>
+                        <td scope="row" data-label="№">4</td>
+                        <td data-label="O'qituvchining ismi, sharifi">Сайидахмедов Р</td>
+                        <td data-label="To'garak o'tkaziladigan vaqti">Chorshanba 13.30</td>
+                        <td data-label="To'garak o'tkaziladigan xona">206-xona</td>
+                      </tr>
+                      <tr>
+                        <td scope="row" data-label="№">5</td>
+                        <td data-label="O'qituvchining ismi, sharifi">Матякубов Ф.Ш.</td>
+                        <td data-label="To'garak o'tkaziladigan vaqti">Пайшанба 13.20-14.20</td>
+                        <td data-label="To'garak o'tkaziladigan xona">физ.лаб</td>
+                        </tr>
+                        <tr>
+                          <td scope="row" data-label="№">6</td>
+                          <td data-label="O'qituvchining ismi, sharifi">Qodirov Ma’ruf</td>
+                          <td data-label="To'garak o'tkaziladigan vaqti">Payshanba 13.30-14.30.</td>
+                          <td data-label="To'garak o'tkaziladigan xona">103-xona</td>
+                        </tr>
+                        <tr>
+                            <td scope="row" data-label="№">7</td>
+                            <td data-label="O'qituvchining ismi, sharifi">Yo‘ldashev Temurbek O.</td>
+                            <td data-label="To'garak o'tkaziladigan vaqti">Shanba 13.20</td>
+                            <td data-label="To'garak o'tkaziladigan xona">101-xona</td>
+                        </tr>
+                        <tr>
+                            <td scope="row" data-label="№">8</td>
+                            <td data-label="O'qituvchining ismi, sharifi">Salimov Jahongir</td>
+                            <td data-label="To'garak o'tkaziladigan vaqti">Shanba 13.30.</td>
+                            <td data-label="To'garak o'tkaziladigan xona">310-xona</td>
+                        </tr>
+                        <tr>
+                            <td scope="row" data-label="№">9</td>
+                            <td data-label="O'qituvchining ismi, sharifi">Йўлдошева Замира О.</td>
+                            <td data-label="To'garak o'tkaziladigan vaqti">Пятница 14:00 - 15:00 </td>
+                            <td data-label="To'garak o'tkaziladigan xona">310-xona</td>
+                    
+                          </tbody>
+                        </table>
+      
+                </div>
+              </li>
+  
+
+              
+              <li data-aos="fade-up" data-aos-delay="180">
+                <i class="fa fa-home-alt icon-help me-5"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-2" class="collapsed ms-2 mt-1">Физика<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                <div id="faq-list-2" class="collapse pt-3" data-bs-parent=".faq-list">
+                  <table class="p-5">
+                    <thead>
+                      <tr>
+                        <th scope="col">№</th>
+                        <th scope="col">O'qituvchining ismi, sharifi</th>
+                        <th scope="col">To'garak o'tkaziladigan vaqti</th>
+                        <th scope="col">To'garak o'tkaziladigan xona</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td scope="row" data-label="№">1</td>
+                            <td data-label="O'qituvchining ismi, sharifi">Raxmatullayev Х. </td>
+                            <td data-label="To'garak o'tkaziladigan vaqti">Seshanba 13.30-14.30</td>
+                            <td data-label="To'garak o'tkaziladigan xona">313-xona</td>
+                        </tr>
+                        <tr>
+                            <td scope="row" data-label="№">2</td>
+                           <td data-label="O'qituvchining ismi, sharifi">G'ofurova D.</td>
+                           <td data-label="To'garak o'tkaziladigan vaqti">Payshanba 13:30-14:30</td>
+                           <td data-label="To'garak o'tkaziladigan xona">104-xona</td>
+                        </tr>
+                        <tr>
+                            <td scope="row" data-label="№">3</td>
+                            <td data-label="O'qituvchining ismi, sharifi">Pirnazarova P.</td>
+                            <td data-label="To'garak o'tkaziladigan vaqti">Dushanba 13-30-14-30</td>
+                            <td data-label="To'garak o'tkaziladigan xona">215-xona</td>
+                        </tr>
+                        <tr>
+                            <td scope="row" data-label="№">4</td>
+                            <td data-label="O'qituvchining ismi, sharifi">Abduraxmonov I.</td>
+                            <td data-label="To'garak o'tkaziladigan vaqti">Shanba 13-30-   14-30</td>
+                            <td data-label="To'garak o'tkaziladigan xona">213-xona</td>
+                        </tr>
+                        <tr>
+                            <td scope="row" data-label="№">5</td>
+                            <td data-label="O'qituvchining ismi, sharifi">Isoqov F.</td>
+                            <td data-label="To'garak o'tkaziladigan vaqti">Chorshanba 13-30-14-30</td>
+                            <td data-label="To'garak o'tkaziladigan xona">213-xona</td>
+                        </tr>
+                        <tr>
+                            <td scope="row" data-label="№">6</td>
+                            <td data-label="O'qituvchining ismi, sharifi">Jumayev B.</td>
+                            <td data-label="To'garak o'tkaziladigan vaqti">Seshanba 13-30-14-30</td>
+                            <td data-label="To'garak o'tkaziladigan xona">213-xona</td>
+                        </tr>
+                        <tr>
+                            <td scope="row" data-label="№">7</td>
+                            <td data-label="O'qituvchining ismi, sharifi">Shodmonov U</td>
+                            <td data-label="To'garak o'tkaziladigan vaqti">Shanba 13-30-   14-30</td>
+                            <td data-label="To'garak o'tkaziladigan xona">313-xona</td>
+                        </tr>
+ 
+                 
+                      </tbody>
+                    </table>
+                </div>
+              </li>
+  
+              <li data-aos="fade-up" data-aos-delay="230">
+                <i class="fa fa-home-alt icon-help me-5"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-3" class="collapsed ms-2 mt-1">Ingliz tili <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                <div id="faq-list-3" class="collapse pt-3" data-bs-parent=".faq-list">
+                
+                  <table class="p-5">
+                    <thead>
+                      <tr>
+                        <th scope="col">№</th>
+                        <th scope="col">O'qituvchining ismi, sharifi</th>
+                        <th scope="col">To'garak o'tkaziladigan vaqti</th>
+                        <th scope="col">To'garak o'tkaziladigan xona</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td scope="row" data-label="№">1</td>
+                            <td data-label="O'qituvchining ismi, sharifi">Nazirova М.</td>
+                            <td data-label="To'garak o'tkaziladigan vaqti">Chorshanba 13.20-14.00</td>
+                            <td data-label="To'garak o'tkaziladigan xona">305-xoa</td>
+                        </tr>
+                        <tr>
+                          <td scope="row" data-label="№">2</td>
+                          <td data-label="O'qituvchining ismi, sharifi">Sotimoba G.</td>
+                          <td data-label="To'garak o'tkaziladigan vaqti">Shanba 13:20-14:00</td>
+                          <td data-label="To'garak o'tkaziladigan xona">307-xona</td>
+                        </tr>
+                  
+                      </tbody>
+                    </table>
+
+                </div>
+              </li>
+  
+              <li data-aos="fade-up" data-aos-delay="300">
+                <i class="fa fa-home-alt icon-help me-5"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-4" class="collapsed ms-2 mt-1">Ijtimoiy fanlar <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                <div id="faq-list-4" class="collapse pt-3" data-bs-parent=".faq-list">
+                  <table class="p-5">
+                    <thead>
+                      <tr>
+                        <th scope="col">№</th>
+                        <th scope="col">O'qituvchining ismi, sharifi</th>
+                        <th scope="col">To'garak o'tkaziladigan vaqti</th>
+                        <th scope="col">To'garak fani</th>
+                        <th scope="col">To'garak nomi</th>
+                        <th scope="col">To'garak o'tkaziladigan xona</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td scope="row" data-label="№"> 1</td>
+                            <td data-label="O'qituvchining ismi, sharifi"> Q.M.Turg'unov</td>
+                            <td data-label="To'garak o'tkaziladigan vaqti"> Dushanba 14.00</td>
+                            <td data-label="To'garak fani"> Jismoniy tarbiya</td>
+                            <td data-label="To'garak nomi">Valeybol</td>
+                            <td data-label="To'garak o'tkaziladigan xona">*</td>
+                        </tr>
+                        <tr>
+                           <td scope="row" data-label="№">2</td>
+                           <td data-label="O'qituvchining ismi, sharifi">B.I.Bozorov</td>
+                           <td data-label="To'garak o'tkaziladigan vaqti">Chorshanba 13:30</td>
+                           <td data-label="To'garak fani">Ona tili</td>
+                           <td data-label="To'garak nomi">"Yosh tilshunos"</td>
+                           <td data-label="To'garak o'tkaziladigan xona">*</td>
+                        </tr>
+                  
+                      </tbody>
+                    </table>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      
+
+
+      <footer class="container-fluid bg">
+        <div class="container pt-5 pb-3">
+          <div class="row">
+            <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 p-3 ">
+              <h6 class="fw-normal">TURIN POLYTECHNIC UNIVERSITY IN TASHKENT.</h6>
+              <h6 class="fw-light">При использовании материалов сайта <br> Академический лицей Турин, ссылка на источник обязательна.</h6>
+            </div>
+    
+            <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 pt-3 px-5 border-end border-start">
+              <h6 class="fw-normal"><i class="fa fa-map-marked-alt"></i>г.Ташкент, ул. Умид 1a</h6>
+              <h6 class="fw-normal"><i class="fa fa-phone-alt"></i> +998 71 246 23 31</h6>
+              <h6 class="fw-normal"><i class="fa fa-phone-office"></i> +998 71 246 55 82</h6>
+              <h6 class="fw-normal"><i class="fa fa-envelope"></i> turinlitsey@polito.uz</h6>
+            </div>
+    
+            <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 pt-3 px-5">
+              <h6 class="fw-normal">Социальные сети: </h6>
+              <div class="fw-normal">
+                <a href="#!" class="px-1"><img src="img/icons/telegram-white.png" width="25" alt=""></a>
+                <a href="#!" class="px-1"><img src="img/icons/instagram-white.png" width="25" alt=""></a>
+                <a href="#!" class="px-1"><img src="img/icons/facebook-white.png" width="25" alt=""></a>
+                <a href="#!" class="px-1"><img src="img/icons/twitter-white.png" width="25" alt=""></a>
+                <a href="#!" class="px-1"><img src="img/icons/youtube-white.png" width="25" alt=""></a>
+              </div>
+              </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-6 col-xl-6 text-center text-md-left">
+              <div class="copyright">&copy;2023 Все права защищены. </div>
+            </div>
+            <div class="col-lg-6 col-xl-6 text-center text-md-right">
+              <div class="credits"> Сайт разработан в студии <a href="https://myweb.uz/" style="color: #b6b6b6;">myweb.uz</a></div>
+            </div>
+          </div>
+        </div> 
+      </footer>
+    
+      
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="bootstrap/js/bootstrap.js"></script>
+    <script type="text/javascript" src="bootstrap/js/bootstrap.bundle.js"></script>
+    <script type="text/javascript" src="fontawesomePremium/js/all.js"></script>
+    
+    <script type="text/javascript" src="js/fontaweasome.js"></script>
+    <script src="js/jquery.ripples.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+    
+    
+    </body>
+    </html>
